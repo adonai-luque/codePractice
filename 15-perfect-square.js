@@ -1,6 +1,6 @@
 function isPerfectSquare(num) {
-  odd = 1
-  sum = 0
+  let odd = 1
+  let sum = 0
   while (sum < num) {
     sum += odd;
     odd += 2;
@@ -10,3 +10,4 @@ function isPerfectSquare(num) {
 }
 
 console.log(isPerfectSquare(23548130116));
+

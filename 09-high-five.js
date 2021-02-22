@@ -5,9 +5,10 @@ function highFive(grades) {
       ? gradesById[grade[0]].push(grade[1])
       : gradesById[grade[0]] = [grade[1]];
   })
+  console.log(gradesById);
   ids = Object.keys(gradesById);
   return ids.map((id) => {
-    let highFive = gradesById[id].sort().reverse().slice(0, 5);
+    let highFive = gradesById[id].sort((a, b) => b-a).slice(0, 5);
     let average = highFive.reduce((a, b) => a+b, 0)/5;
     return [parseInt(id), Math.floor(average)];
   })

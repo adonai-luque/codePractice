@@ -1,4 +1,5 @@
 function playPass(s, n) {
+  
   let encode = (c, index) => {
     if (/\d/.test(c)) {
       return (9 - c).toString();
@@ -10,5 +11,11 @@ function playPass(s, n) {
       return c;
     }
   }
+  
+  
+  
   return [...s].map((c, index) => encode(c, index)).reverse().join('')
 }
+
+console.log(playPass("I LOVE YOU", 4));
+

@@ -1,9 +1,9 @@
 function alphabetPosition(text) {
   let alphabetReducer = (reduced, c) => {
-    if (/[A-Z]/.test(c.toUpperCase())) {
-      reduced.push((c.toUpperCase().charCodeAt() - 64).toString());
+    if (/[A-Z]/.test(c)) {
+      reduced.push(   (c.charCodeAt() - 64).toString()   );
     }
     return reduced;
   }
-  return [...text].reduce(alphabetReducer, []).join(' ');
+  return [...text.toUpperCase()].reduce(alphabetReducer, []).join(' ');
 }
