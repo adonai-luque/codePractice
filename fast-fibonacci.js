@@ -9,4 +9,4 @@ function fibonacci(n) {
   return last;
 }
 
-console.log(fibonacci(200));
+console.log(fibonacci(500));
